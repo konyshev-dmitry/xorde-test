@@ -1,0 +1,135 @@
+{
+    "components": [
+        {
+            "enabled": true,
+            "inputs": [
+                {
+                    "name": "in1",
+                    "type": "float"
+                },
+                {
+                    "name": "in2",
+                    "type": "float"
+                }
+            ],
+            "module": "xoExampleModuleApp",
+            "name": "ExampleSlidersComponent_1",
+            "outputs": [
+                {
+                    "name": "out1",
+                    "type": "float"
+                },
+                {
+                    "name": "out2",
+                    "type": "float"
+                }
+            ],
+            "settings": {
+                "title": {
+                    "default": "Example sliders",
+                    "value": "The first is negated, the second is plus one"
+                }
+            },
+            "type": "ExampleSlidersComponent",
+            "x": 0,
+            "y": 0
+        },
+        {
+            "enabled": true,
+            "inputs": [
+                {
+                    "name": "in",
+                    "type": "float"
+                }
+            ],
+            "module": "xoExampleModulePlugin",
+            "name": "Multiply_1",
+            "outputs": [
+                {
+                    "name": "out",
+                    "type": "float"
+                }
+            ],
+            "settings": {
+                "factor": {
+                    "default": "1",
+                    "max": 1000,
+                    "min": -1000,
+                    "value": "-1"
+                }
+            },
+            "type": "Multiply",
+            "x": 0,
+            "y": 0
+        },
+        {
+            "enabled": true,
+            "inputs": [
+                {
+                    "name": "in",
+                    "type": "float"
+                }
+            ],
+            "module": "xoExampleModulePlugin",
+            "name": "PlusOne_1",
+            "outputs": [
+                {
+                    "name": "out",
+                    "type": "float"
+                }
+            ],
+            "settings": {
+            },
+            "type": "PlusOne",
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "connections": [
+        {
+            "RMIP": 0,
+            "inputModuleName": "Multiply_1",
+            "inputModuleType": "Multiply",
+            "inputName": "in",
+            "inputType": "float",
+            "outputModuleName": "ExampleSlidersComponent_1",
+            "outputModuleType": "ExampleSlidersComponent",
+            "outputName": "out1",
+            "outputType": "float"
+        },
+        {
+            "RMIP": 0,
+            "inputModuleName": "ExampleSlidersComponent_1",
+            "inputModuleType": "ExampleSlidersComponent",
+            "inputName": "in1",
+            "inputType": "float",
+            "outputModuleName": "Multiply_1",
+            "outputModuleType": "Multiply",
+            "outputName": "out",
+            "outputType": "float"
+        },
+        {
+            "RMIP": 0,
+            "inputModuleName": "ExampleSlidersComponent_1",
+            "inputModuleType": "ExampleSlidersComponent",
+            "inputName": "in2",
+            "inputType": "float",
+            "outputModuleName": "PlusOne_1",
+            "outputModuleType": "PlusOne",
+            "outputName": "out",
+            "outputType": "float"
+        },
+        {
+            "RMIP": 0,
+            "inputModuleName": "PlusOne_1",
+            "inputModuleType": "PlusOne",
+            "inputName": "in",
+            "inputType": "float",
+            "outputModuleName": "ExampleSlidersComponent_1",
+            "outputModuleType": "ExampleSlidersComponent",
+            "outputName": "out2",
+            "outputType": "float"
+        }
+    ],
+    "description": "'Out1' is multiplied by -1 and linked to 'In1', 'Out2' receives +1 and is linked to 'In2'"
+}

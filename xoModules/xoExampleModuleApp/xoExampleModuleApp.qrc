@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/arrow-left-right-bold.png</file>
+        <file>images/test-tube.png</file>
+        <file>images/test-tube.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,63 @@
+{
+    "components": [
+        {
+            "enabled": true,
+            "inputs": [
+                {
+                    "name": "in1",
+                    "type": "float"
+                },
+                {
+                    "name": "in2",
+                    "type": "float"
+                }
+            ],
+            "module": "xoExampleModuleApp",
+            "name": "ExampleSlidersComponent_1",
+            "outputs": [
+                {
+                    "name": "out1",
+                    "type": "float"
+                },
+                {
+                    "name": "out2",
+                    "type": "float"
+                }
+            ],
+            "settings": {
+                "title": {
+                    "default": "Example sliders",
+                    "value": "Move the upper two sliders to change the lower ones"
+                }
+            },
+            "type": "ExampleSlidersComponent",
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "connections": [
+        {
+            "RMIP": 0,
+            "inputModuleName": "ExampleSlidersComponent_1",
+            "inputModuleType": "ExampleSlidersComponent",
+            "inputName": "in1",
+            "inputType": "float",
+            "outputModuleName": "ExampleSlidersComponent_1",
+            "outputModuleType": "ExampleSlidersComponent",
+            "outputName": "out1",
+            "outputType": "float"
+        },
+        {
+            "RMIP": 0,
+            "inputModuleName": "ExampleSlidersComponent_1",
+            "inputModuleType": "ExampleSlidersComponent",
+            "inputName": "in2",
+            "inputType": "float",
+            "outputModuleName": "ExampleSlidersComponent_1",
+            "outputModuleType": "ExampleSlidersComponent",
+            "outputName": "out2",
+            "outputType": "float"
+        }
+    ],
+    "description": "'ExampleSlidersComponent' with outputs connected to it's inputs"
+}

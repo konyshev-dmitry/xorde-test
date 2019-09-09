@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>exampleSchemes/Example 1.scheme</file>
+        <file>exampleSchemes/Example 2.scheme</file>
+    </qresource>
+</RCC>

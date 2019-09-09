@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/multiply.svg</file>
+        <file>images/test-tube-empty.svg</file>
+        <file>images/plus-one.svg</file>
+    </qresource>
+</RCC>
